@@ -147,7 +147,7 @@ Estructura del Repositorio
 ├── configs/
 │   ├── nagios.cfg
 │   └── docker-servers.cfg
-└── screenshots/
+└── capturas/
     ├── hosts.png
     ├── services.png
     └── alert.png
