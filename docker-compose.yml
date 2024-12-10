@@ -1,0 +1,24 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-server
+    environment:
+      MYSQL_ROOT_PASSWORD: tupassword
+      MYSQL_DATABASE: test
+    ports:
+      - "3306:3306"
+    networks:
+      - nagios-network
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-server
+    ports:
+      - "8080:80"
+    networks:
+      - nagios-network
+
+networks:
+  nagios-network:
+    driver: bridge
